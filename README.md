@@ -28,4 +28,4 @@ sv1 = Servo(pin0, min_us=750, max_us=2250)
 sv.write_angle(10)
 ```
 
-[Code from The Sheep on Bitbucket](https://bitbucket.org/thesheep/micropython-servo/src/f562a6abeaf0e83b752838df7cd31d88ea10b2c7?at=default) and made compatable (and worse) by me. Rescaled function by [Tom Viner](https://www.youtube.com/channel/UCmA_ydtrCCQ7twKpovboiPA)
+[Code from The Sheep on Bitbucket](https://bitbucket.org/thesheep/micropython-servo/src/f562a6abeaf0e83b752838df7cd31d88ea10b2c7?at=default) and made compatable (and worse) by me. Rescale function by [Tom Viner](https://www.youtube.com/channel/UCmA_ydtrCCQ7twKpovboiPA)
