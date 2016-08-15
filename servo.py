@@ -30,6 +30,8 @@ class Servo:
         analog_period = round((1/self.freq) * 1000 ) # hertz to miliseconds
         self.pin.set_analog_period(analog_period)
         self.pin.write_analog(duty)
+        self.pin.write_digital(0) # turn the pin off
+
         
     def write_angle(self, degrees=None):
         degrees = degrees % 360
