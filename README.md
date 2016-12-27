@@ -1,10 +1,50 @@
 # Class for Servo Control in Python on the Microbit
 
-This is a simple class for controlling servos on the microbit in Python. Cut and paste [the class in servo.py](https://github.com/microbit-playground/microbit-servo-class/blob/master/servo.py) to the top of the program. See [here for an example](https://github.com/microbit-playground/microbit-servo-class/blob/master/examples/twist-example.py)
+This is a simple class for controlling servos on the microbit in Python. 
 
-### Example Usage
+## Ways of Using the Module
 
-Paste the class on the line after `import * from microbit`.
+#### Quick and Easy
+
+Cut and paste [the class in servo.py](https://github.com/microbit-playground/microbit-servo-class/blob/master/servo.py) to the top of the program. 
+
+See [here for an example](https://github.com/microbit-playground/microbit-servo-class/blob/master/examples/twist-example.py)
+
+#### Proper Way
+
+The correct approach is to copy the module to the filesystem. It can then be accessed in the same way the `microbit` module is imported at the start of each program.
+
+The are two steps: copying the module to the microbit and importing the module into your program.
+
+
+##### Copying the module:
+
+1. Save [the module](https://github.com/microbit-playground/microbit-servo-class/blob/master/servo.py) to your computer.
+
+2. Save the module in the `/mu_code/` directory in the root of your home directory.
+
+3. Flash your program to mu.
+
+4. An error message will scroll across the screen about the lack of the servo module.
+
+5. Once it has finished, click the 'files' icon in mu and upload the `servo.py` file to your microbit.
+
+6. Press reset on your microbit for the program to reload and load the module.
+
+##### In your program:
+
+```
+from microbit import *
+
+# from servo.py import the Servo class
+from servo import Servo
+
+# this can now be accessed within your program
+sv1 = Servo(pin0)
+sv1.write_angle(50) # turn servo to 50 degrees 
+```
+
+## Code Examples
 
 ##### 180 degree SG90 Hobby Servo @ 3.3v on pin0:
 
