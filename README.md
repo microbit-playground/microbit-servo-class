@@ -2,13 +2,15 @@
 
 This is a simple class for controlling servos on the microbit in Python. 
 
-## Ways of Using the Module
+## Using the Modules
+
+There are two ways:
 
 #### Quick and Easy
 
 Cut and paste [the class in servo.py](https://github.com/microbit-playground/microbit-servo-class/blob/master/servo.py) to the top of the program. 
 
-See [here for an example](https://github.com/microbit-playground/microbit-servo-class/blob/master/examples/twist-example.py)
+See [here for an example](https://github.com/microbit-playground/microbit-servo-class/blob/master/examples/twist-example.py).
 
 #### Proper Way
 
@@ -21,7 +23,7 @@ The are two steps: copying the module to the microbit and importing the module i
 
 1. Save [the module](https://github.com/microbit-playground/microbit-servo-class/blob/master/servo.py) to your computer.
 
-2. Save the module in the `/mu_code/` directory in the root of your home directory.
+2. Copy the downloaded module to the `/mu_code/` directory in the root of your home directory.
 
 3. Flash your program to mu.
 
@@ -29,7 +31,7 @@ The are two steps: copying the module to the microbit and importing the module i
 
 5. Once it has finished, click the 'files' icon in mu and upload the `servo.py` file to your microbit.
 
-6. Press reset on your microbit for the program to reload and load the module.
+6. Press reset on your microbit. When the program runs again it will load the module.
 
 ##### In your program:
 
@@ -54,17 +56,17 @@ sv1.write_angle(50) # turn servo to 50 degrees
 ````
 ##### 180 degree SG90 Hobby Servo @ 4.8v on pin0:
 
-_note how min_us and max_us changes with the voltage supply_
+_note how min_us and max_us changes. These details will be on the servo's datasheet._
 
 ```
 sv1 = Servo(pin0, min_us=1000, max_us=2000)
 sv1.write_angle(180) # turn servo to 180 degrees 
 ````
 
-##### 180 degree Parallax 900-00005 (BS1) Servo @ 6v on pin0:
+##### 180 degree Parallax 900-00005 (BS1) Servo @ 6v on pin1:
 
 ```
-sv1 = Servo(pin0, min_us=750, max_us=2250)
+sv1 = Servo(pin1, min_us=750, max_us=2250)
 sv.write_angle(10)
 ```
 
